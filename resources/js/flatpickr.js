@@ -8,6 +8,13 @@ flatpickr("#event_date", {
     
 }); 
 
+flatpickr("#calendar", {
+    "locale": Japanese,
+    // minDate: "today",
+    maxDate: new Date().fp_incr(30)
+    
+}); 
+
 const setting = {
     "locale": Japanese,
     enableTime: true,
@@ -16,6 +23,7 @@ const setting = {
     time_24hr: true,
     minTime: "09:00",
     maxTime: "18:00",
+    minuteIncrement: 30
 }
 flatpickr("#start_time", setting);
 flatpickr("#end_time", setting);
